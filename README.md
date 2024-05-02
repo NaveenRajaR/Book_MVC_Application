@@ -13,8 +13,10 @@ This project is a web application for managing books. It allows users to view a 
 
 1. Clone the repository.
 2. Open the solution file in Visual Studio or the project folder in Visual Studio Code.
-3. Build the solution to restore dependencies.
-4. Run the application.
+3. Replace the connection setting in appsetting.json according to your DB(SQL).
+4. Click Tools->Nuget console and run add-mirgration [Any name] and run update-database.
+5. Build the solution to restore dependencies.
+6. Run the application.
 
 ## Usage
 
@@ -32,33 +34,12 @@ This project is a web application for managing books. It allows users to view a 
 
 ### Bulk Inserting Books
 
-- Click on the "Bulk Insert Books" link to bulk insert books into the database.
-- Enter the details of the books in the provided form.
-- Click on the "Save" button to insert the books into the database.
+- Click on the "Save List" link to bulk insert books into the database.
 
 ### Total Price of Books
 
-- Click on the "Get Total Price" link to calculate the total price of all books.
-
-## Contributing
-
-If you'd like to contribute to this project, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/new-feature`).
-3. Make your changes.
-4. Commit your changes (`git commit -am 'Add new feature'`).
-5. Push to the branch (`git push origin feature/new-feature`).
-6. Create a new Pull Request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+- Click on the "Get Total Price of Books" link to calculate the total price of all books.
 
 ## Credits
 
-- Created by [Your Name]
-
-## Contact
-
-For support or inquiries, please contact [Your Email].
+- Created by Naveenraja Rajakulendran.
