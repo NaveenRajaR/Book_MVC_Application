@@ -1,0 +1,54 @@
+﻿@model List<BookModel>
+
+<h2 id="bookhead">Books Sorted by Publisher</h2>
+
+@if (Model.Any())
+{
+    <div class="table-responsive">
+        <table id="bookTable" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Publisher</th>
+                    <th>Price</th>
+                    <th>Publication Year</th>
+                    <th>City of Publication</th>
+                    <th>Medium</th>
+                    <th>MLACitation</th>
+                    <th>ChicagoCitation</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.Title</td>
+                        <td>@book.AuthorFirstName @book.AuthorLastName</td>
+                        <td>@book.Publisher</td>
+                        <td>@book.Price</td>
+                        <td>@book.PublicationYear</td>
+                        <td>@book.CityOfPublication</td>
+                        <td>@book.Medium</td>
+                        <td>@book.MLACitation</td>
+                        <td>@book.ChicagoCitation</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <p>No records to display.</p>
+}
+<a class="btn btn-primary" onclick="return SortByPublisher();">Sort by Publisher</a>
+<a class="btn btn-secondary" onclick="return SortByAuthor();">Sort by Author</a>
+<a class="btn btn-danger" onclick="return SortByPublisherSP();">Sort by Publisher SP</a>
+<a class="btn btn-outline-primary" onclick="return SortByAuthorSP();">Sort by Author SP</a>
+<a class="btn btn-dark" onclick="return GetTotalPrice();">Get Total Price of Books</a>
+<a class="btn btn-primary" onclick="return SaveList();">Save List</a>
+
+@section Scripts {
+    <script src="~/js/book/book.js" asp-append-version="true"></script>
+}
